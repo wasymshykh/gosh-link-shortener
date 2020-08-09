@@ -1,5 +1,7 @@
 # wpl-course-project
 
+![GoSh Logo](/frontend/images/logo-alt.png)
+
 ## GoSh - url shortener script
 
 ### Introduction

@@ -184,15 +184,15 @@ span.bold {
 }
 
 .content-header {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 1em 1em 1em;
+    padding: 2em 5% 1em 5%;
 }
 
 .content-logo {
-    width: 150px;
+    width: 140px;
     display: flex;
 }
 
@@ -507,4 +507,125 @@ body.center {
 }
 .form-back-link a:hover {
     transform: translateX(-15px);
+}
+
+/* 
+    Admin dashboard
+*/
+
+.admin-panel .content-header {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9.5px 0.5px rgba(0, 0, 0, 0.05);          
+}
+.admin-panel .content-logo {
+    align-items: center;
+}
+.admin-panel .logo-info::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #89dd9f;
+}
+.admin-panel .logo-info {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-left: 1em;
+    padding-left: 1em;
+    color: #353535;
+    letter-spacing: 1px;
+    position: relative;
+}
+.admin-panel .logo-info span {
+    color: #37c25b;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+ul.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.navigation li {
+    padding: 0.2em 0.6em;
+}
+
+.navigation li:not(:last-child) {
+    border-right: 1px solid #e0e0e0;
+}
+
+.navigation li a {
+    font-size: 1em;
+    font-weight: 400;
+    color: #353535;
+    letter-spacing: 1px;
+    padding: 0.2em 0.5em;
+    position: relative;
+}
+
+.navigation li a i {
+    color: #969696;
+    margin-right: 0.6em;
+    font-size: 0.8em;
+}
+
+.navigation li a:hover i {
+    color: #37c25b;
+}
+
+.navigation li a::before {
+    content: "";
+    width: 8px;
+    height: 3px;
+    background-color: #37c25b;
+    position: absolute;
+    bottom: -0.2em;
+    left: 50%;
+    border-radius: 1.5px;
+    transform: translateX(calc(-50% + 0.6em));
+    transition: 0.2s all;
+    opacity: 0;
+}
+.navigation li a:hover::before {
+    opacity: 1;
+    width: 18px;
+}
+
+/* 
+    Dashbard page
+*/
+
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 6% 3em 6%;
+    width: 100%;
+    min-height: calc(100vh - 150px);
+}
+
+.admin-page-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-page-title h1 {
+    color: #37c25b;
+    font-size: 1.4em;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.admin-page-title h1 span {
+    color: #353535;
 }

@@ -52,6 +52,9 @@ a:hover {
     color: #37c25b;
 }
 
+span.bold {
+    font-weight: 700;
+}
 
 .input-fade::before {
     content: "";
@@ -90,7 +93,8 @@ a:hover {
     pointer-events: none;
 }
 
-.input-field input[type='text'] {
+.input-field input[type='text'],
+.input-field input[type='password'] {
     border-radius: 4px;
     background-color: #ffffff;
     box-shadow: 0px 5px 8.8px 1.2px rgba(0, 0, 0, 0.05);
@@ -102,7 +106,8 @@ a:hover {
     font-family: inherit;
 }
 
-.input-field input[type='text']:focus {
+.input-field input[type='text']:focus,
+.input-field input[type='password']:focus {
     box-shadow: 0px 15px 14px 1.2px rgba(0, 0, 0, 0.05);
     transform: scale(1.1);
 }
@@ -164,11 +169,10 @@ a:hover {
     background-size: cover;
 }
 
-
 /* 
     Page Content
 */
-  
+
 #content {
     display: flex;
     flex-direction: column;
@@ -226,18 +230,21 @@ a:hover {
     text-align: center;
     padding: 3em 0 1em 0;
 }
+
 .home-main-title h1 {
     font-size: 3.6em;
     font-weight: 300;
     letter-spacing: 2px;
     color: #353535;
 }
+
 .home-main-title h1 span {
     font-weight: 900;
     font-style: italic;
     color: #37c25b;
     letter-spacing: 0;
 }
+
 .home-main-title p {
     font-size: 1.2em;
     letter-spacing: 2px;
@@ -249,14 +256,17 @@ a:hover {
     max-width: 500px;
     margin: 0 auto;
 }
+
 .home-main-input input {
     display: block;
     width: 100%;
 }
+
 .home-main-input input[type='text'] {
     font-size: 1.2em;
     padding: 1.2em 2em;
 }
+
 .home-main-input.input-field label {
     left: 1.4em;
     font-size: 1.2em;
@@ -273,6 +283,7 @@ a:hover {
     display: flex;
     align-items: center;
 }
+
 .h-m-s-title h3 {
     font-size: 1em;
     font-weight: 700;
@@ -281,6 +292,7 @@ a:hover {
     color: #353535;
     padding-left: 1em;
 }
+
 .h-m-s-title h3 i {
     font-weight: 300;
 }
@@ -295,6 +307,7 @@ a:hover {
 .h-m-s-box {
     flex: 2;
 }
+
 .h-m-s-box:last-child {
     flex: 3;
 }
@@ -349,6 +362,7 @@ a:hover {
     max-width: 60px;
     display: block;
 }
+
 .home-stats-box-icon img {
     width: 100%;
     height: auto;
@@ -358,6 +372,7 @@ a:hover {
 .home-stats-box-details {
     margin-left: 1em;
 }
+
 .home-stats-box-details h1 {
     color: #353535;
     font-size: 2em;
@@ -366,6 +381,7 @@ a:hover {
     letter-spacing: 0px;
     line-height: 1;
 }
+
 .home-stats-box-details p {
     color: #353535;
     font-size: 1em;
@@ -377,17 +393,21 @@ a:hover {
 .home-stats-box:nth-child(1) h1 {
     color: #ffd200;
 }
+
 .home-stats-box:nth-child(2) h1 {
     color: #26c6da;
 }
 
-/* Footer */
+/* 
+    Footer
+*/
 
 footer {
     width: 100%;
     max-width: 1100px;
     display: flex;
     justify-content: flex-end;
+    padding: 0.4em 0 1em 0;
 }
 
 ul.footer-links {
@@ -396,13 +416,95 @@ ul.footer-links {
 }
 
 .footer-links li {
-    margin: 0.2em 1em;
+    margin: 0.2em 0.6em;
 }
 
 .footer-links li a {
     color: #f1fdf4;
+    padding: 0.2em 0.6em;
 }
 
-.footer-links li a span.bold {
-    font-weight: 700;
+/* 
+    Admin Styles
+*/
+
+body.center {
+    align-items: center;
+    justify-content: center;
+}
+
+#content.login-page {
+    max-width: 500px;
+    padding: 3em 2em;
+}
+
+.login-section {
+    width: 88%;
+}
+
+.login-section .content-logo {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.login-title {
+    margin: 2em 0 1.4em 0;
+    text-align: center;
+}
+
+.login-title h1 {
+    font-size: 1.4em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-inputs .input-field {
+    margin-top: 1.8em;
+}
+
+.login-inputs .input-field input[type='text'],
+.login-inputs .input-field input[type='password'] {
+    font-size: 1.2em;
+    padding: 0.9em 2em;
+    width: 100%;
+}
+
+.login-inputs .input-field label {
+    left: 1.4em;
+    font-size: 1.1em;
+}
+
+.login-inputs .input-submit {
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.login-inputs .input-submit button[type='submit'] {
+    padding: 0.8em 1.4em;
+    font-size: 1em;
+}
+
+.form-back-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.form-back-link a {
+    color: #353535;
+    opacity: 0.8;
+    padding: 0.2em 1em;
+    display: block;
+}
+.form-back-link a i {
+    margin-right: 0.6em;
+}
+.form-back-link a:hover {
+    transform: translateX(-15px);
 }

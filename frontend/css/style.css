@@ -72,7 +72,7 @@ span.bold {
     position: relative;
 }
 
-.input-field label {
+.input-field label:not(.no-up) {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -298,7 +298,7 @@ span.bold {
 }
 
 .home-main-input {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -320,7 +320,7 @@ span.bold {
 .home-main-settings {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 700px;
     margin: 1.4em auto;
 }
 
@@ -344,29 +344,117 @@ span.bold {
 
 .h-m-s-boxes {
     display: flex;
-    width: 90%;
+    width: 94%;
     margin: 0 auto;
     margin-top: 1.4em;
 }
 
 .h-m-s-box {
     flex: 2;
+    margin-right: 1em;
 }
 
 .h-m-s-box:last-child {
     flex: 3;
+    margin-right: 0;
 }
 
 .h-m-s-input {
     display: flex;
+    align-items: center;
 }
 
-.h-m-s-input label {
-    font-size: 0.9em;
+.input-checkbox {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: relative;
+}
+.input-checkbox input[type="checkbox"] {
+    display: none;
+}
+.input-checkbox label {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 19.5px 5.5px rgba(0, 0, 0, 0.05);   
+    width: 100%;
+    height: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8em;
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s all;
+    left: -5px;
+    top: 0;
+}
+.input-checkbox input[type="checkbox"] ~ .input-checkbox-on {
+    color: #37c25b;
+}
+.input-checkbox input[type="checkbox"] ~ .input-checkbox-off {
+    color: #f44336;
+    opacity: 1;
+    left: 0;
+}
+.input-checkbox input[type="checkbox"]:checked ~ .input-checkbox-off {
+    opacity: 0;
+}
+.input-checkbox input[type="checkbox"]:checked ~ .input-checkbox-on {
+    opacity: 1;
+    left: 0;
+}
+
+.h-m-s-input > label {
+    font-size: 0.85em;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-left: 0.6em;
+    cursor: pointer;
+}
+
+.h-m-s-box .h-m-s-input-text .input-field input[type='text'],
+.h-m-s-box .h-m-s-input-text .input-field input[type='password'] {
+    width: 100%;
+}
+.h-m-s-box:last-child .h-m-s-input-text .input-field input[type='text'] {
+    padding-left: 5.5em;
+    margin-left: 1.5em;
+}
+
+.h-m-s-input-text {
+    margin-top: -2em;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.2s all;
+}
+
+.h-m-s-input-text.t-show {
+    opacity: 1;
+    pointer-events: all;
+    margin-top: 1em;
+}
+
+.h-m-s-input-text label.no-up {
+    position: absolute;
+    padding: 0.2em 0.5em 0.2em 1em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: #37c25b;
+    color: #ffffff;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+}
+
+.h-m-s-input-text .input-field label.t-co {
+    font-size: 0.8em;
 }
 
 .home-main-submit {
@@ -674,7 +762,6 @@ ul.navigation {
 .admin-page-title h1 span {
     color: #353535;
 }
-
 
 /* 
     User Side

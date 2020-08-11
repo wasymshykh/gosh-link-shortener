@@ -54,5 +54,20 @@ $(document).ready(() => {
         })
     })
 
+    /* checkbox to show inputs */
+
+    _c = $('.h-m-s-input .input-checkbox input');
+    
+    _c.change((e)=>{
+        inp = $(e.currentTarget);
+        v = inp.prop('checked')
+        ch = $(e.currentTarget).parent().parent().parent().children().last();
+        if (v) {
+            ch.addClass('t-show');
+        } else {
+            ch.removeClass('t-show');
+        }
+    })
+
     
 })

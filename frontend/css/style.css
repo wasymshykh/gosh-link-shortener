@@ -742,7 +742,8 @@ ul.navigation {
     min-height: calc(100vh - 150px);
 }
 
-.admin-page-title {
+.admin-page-title,
+.user-page-title {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
@@ -750,7 +751,8 @@ ul.navigation {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.admin-page-title h1 {
+.admin-page-title h1,
+.user-page-title h1 {
     color: #37c25b;
     font-size: 1.4em;
     font-weight: 900;
@@ -759,8 +761,24 @@ ul.navigation {
     text-align: center;
 }
 
-.admin-page-title h1 span {
+.admin-page-title h1 span,
+.user-page-title h1 span {
     color: #353535;
+}
+
+.admin-page-message {
+    width: 100%;
+    font-size: 1.1em;
+    max-width: 800px;
+    padding: 0.8em 1em;
+    color: #37c25b;
+    background-color: #f1fdf4;
+    justify-content: center;
+    margin: 0 auto;
+}
+.admin-page-message i {
+    color: #f44336;
+    margin-right: 0.5em;
 }
 
 /* 
@@ -1065,4 +1083,53 @@ ul.navigation {
     display: flex;
     align-items: center;
 }
+
+/* 
+    Credits page
+*/
+
+.credits-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5em;
+}
+
+.credits-row a {
+    font-weight: 700;
+    color: #37c25b;
+    margin-right: 0.4em;
+}
+
+.credits-row span.info {
+    font-style: italic;
+}
+
+
+/* 
+    Terms page
+*/
+
+.terms-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.terms-row h1 {
+    font-weight: 700;
+    color: #37c25b;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5em;
+}
+
+.terms-row span.term {
+    padding-left: 1em;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+}
+
+
 

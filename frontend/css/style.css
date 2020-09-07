@@ -38,6 +38,59 @@ body img {
 }
 
 /* 
+    Wait Loader
+*/
+
+#wait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.2s all;
+}
+
+@keyframes logo-loader {
+    0% {
+        background-position: 0px 0px;
+    }
+    50% {
+        background-position: -756px 0px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+.wait-play { 
+    animation-duration: 1200ms;
+    animation-timing-function: steps(18);
+    animation-iteration-count: infinite;
+    width: 42px;
+    height: 50px;
+    background-image: url(../images/load-60fps.svg);
+    background-repeat: no-repeat;
+}
+.wait-play {
+    animation-name: logo-loader;
+}
+#wait h6 {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 0.5em;
+    transition: 0.2s all;
+}
+
+
+/* 
     Generalized
 */
 
@@ -273,7 +326,7 @@ span.bold {
 
 .home-main-title {
     text-align: center;
-    padding: 3em 0 1em 0;
+    padding: 4em 0 3em 0;
 }
 
 .home-main-title h1 {
@@ -299,7 +352,7 @@ span.bold {
 
 .home-main-input {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
 }
 
 .home-main-input input {

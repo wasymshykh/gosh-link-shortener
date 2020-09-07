@@ -57,7 +57,6 @@ $(document).ready(() => {
     /* checkbox to show inputs */
 
     _c = $('.h-m-s-input .input-checkbox input');
-    
     _c.change((e)=>{
         inp = $(e.currentTarget);
         v = inp.prop('checked')
@@ -69,5 +68,13 @@ $(document).ready(() => {
         }
     })
 
-    
+
+    /* loading on button with class 'go-load' */
+
+    _g = $('.go-load');
+    _g.click((e)=>{
+        $('#wait').prop('style', '');
+        $('#wait h6').prop('style', '');
+    })
+
 })

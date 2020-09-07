@@ -11,9 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,900&display=swap" rel="stylesheet">
 
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="https://kit.fontawesome.com/5d66a89228.js"></script>
+    <script>
+        $(window).on('load', () => {
+            setTimeout(() => {
+                $('#wait h6').css({
+                    'transform': 'translateX(15px)',
+                    'opacity': '0'
+                })
+    
+                setTimeout(() => {
+                    $('#wait').css({
+                        'opacity': '0',
+                        'pointer-events': 'none'
+                    })
+                }, 200);
+            }, 500);
+        });
+    </script>
+    <script src="foreign/fontawesome/js/solid.min.js"></script>    
+    <script defer src="foreign/fontawesome/js/fontawesome.min.js"></script>
 </head>
 <body>
+
+    <div id="wait">
+        <div class="wait-play"></div>
+        <h6>Loading...</h6>
+    </div>
     
     <div id="content">
 
@@ -118,7 +141,7 @@
                 </div>
                 <div class="home-main-submit">
                     <div class="input-submit green-button">
-                        <button type="submit">Generate <i class="fas fa-long-arrow-alt-right"></i></button>
+                        <button type="submit" class="go-load">Generate <i class="fas fa-long-arrow-alt-right"></i></button>
                     </div>
                 </div>
             </div>

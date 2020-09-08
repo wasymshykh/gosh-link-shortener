@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoShWF", "GoShWF\GoShWF.csproj", "{C7751122-589D-4317-9DA2-C9C885F204B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7751122-589D-4317-9DA2-C9C885F204B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7751122-589D-4317-9DA2-C9C885F204B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7751122-589D-4317-9DA2-C9C885F204B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7751122-589D-4317-9DA2-C9C885F204B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EED0FA0F-EB0F-4AA7-85A4-2748CE1CD67E}
+	EndGlobalSection
+EndGlobal
